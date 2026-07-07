@@ -1,0 +1,336 @@
+{
+  "generated_at": "2026-07-07T16:11:54.195963",
+  "inputs": {
+    "traffic_csv": "../sample_data/traffic.csv",
+    "auth_log": "../sample_data/auth.log"
+  },
+  "ids_findings": {
+    "total_records_analyzed": 1340,
+    "rules_evaluated": [
+      "SCAN-001",
+      "FLOOD-001",
+      "PORT-001"
+    ],
+    "alert_count": 2,
+    "alerts": [
+      {
+        "rule_id": "SCAN-001",
+        "rule_name": "Port Scan Detection",
+        "severity": "high",
+        "src_ip": "198.51.100.77",
+        "dst_ip": "10.0.0.5",
+        "distinct_ports_contacted": 20,
+        "window_start": "2026-07-06T08:20:00",
+        "window_end": "2026-07-06T08:20:01",
+        "evidence": "20 distinct destination ports contacted in 60s window (threshold=20)"
+      },
+      {
+        "rule_id": "FLOOD-001",
+        "rule_name": "SYN Flood / Packet Flood Detection",
+        "severity": "critical",
+        "src_ip": "198.51.100.88",
+        "dst_ip": "10.0.0.9",
+        "dst_port": 80,
+        "packet_count": 100,
+        "window_start": "2026-07-06T08:35:00",
+        "window_end": "2026-07-06T08:35:00",
+        "evidence": "100 packets to 10.0.0.9:80 within 10s (threshold=100)"
+      }
+    ]
+  },
+  "forensic_findings": {
+    "total_events_parsed": 46,
+    "bruteforce_findings": [
+      {
+        "src_ip": "192.0.2.55",
+        "failed_attempt_count": 25,
+        "window_start": "2026-07-06T09:42:01",
+        "window_end": "2026-07-06T09:42:58",
+        "targeted_users": [
+          "admin"
+        ],
+        "likely_compromised": true,
+        "compromise_time": "2026-07-06T09:43:00",
+        "compromised_user": "admin",
+        "evidence": "25 failed login attempts from 192.0.2.55 between 2026-07-06T09:42:01 and 2026-07-06T09:42:58; FOLLOWED BY SUCCESSFUL LOGIN as 'admin' at 2026-07-06T09:43:00"
+      }
+    ],
+    "timeline": [
+      {
+        "timestamp": "2026-07-06T09:03:25",
+        "event": "Accepted password for alice from 10.0.0.11:8039"
+      },
+      {
+        "timestamp": "2026-07-06T09:09:18",
+        "event": "Accepted password for alice from 10.0.0.11:38445"
+      },
+      {
+        "timestamp": "2026-07-06T09:16:26",
+        "event": "Accepted password for deploy from 10.0.0.15:33130"
+      },
+      {
+        "timestamp": "2026-07-06T09:22:39",
+        "event": "Accepted password for svc-backup from 10.0.0.12:4240"
+      },
+      {
+        "timestamp": "2026-07-06T09:27:35",
+        "event": "Accepted password for svc-backup from 10.0.0.15:5668"
+      },
+      {
+        "timestamp": "2026-07-06T09:29:41",
+        "event": "Accepted password for bob from 10.0.0.15:33228"
+      },
+      {
+        "timestamp": "2026-07-06T09:39:06",
+        "event": "Accepted password for alice from 10.0.0.12:53519"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:01",
+        "event": "Failed password for admin from 192.0.2.55:7938"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:04",
+        "event": "Failed password for admin from 192.0.2.55:38809"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:06",
+        "event": "Failed password for admin from 192.0.2.55:31086"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:08",
+        "event": "Failed password for admin from 192.0.2.55:29012"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:11",
+        "event": "Failed password for admin from 192.0.2.55:11956"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:13",
+        "event": "Failed password for admin from 192.0.2.55:37066"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:15",
+        "event": "Failed password for admin from 192.0.2.55:23143"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:17",
+        "event": "Failed password for admin from 192.0.2.55:36013"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:20",
+        "event": "Failed password for admin from 192.0.2.55:30057"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:23",
+        "event": "Failed password for admin from 192.0.2.55:60169"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:25",
+        "event": "Failed password for admin from 192.0.2.55:22300"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:28",
+        "event": "Failed password for admin from 192.0.2.55:28047"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:30",
+        "event": "Failed password for admin from 192.0.2.55:29243"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:33",
+        "event": "Failed password for admin from 192.0.2.55:22221"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:35",
+        "event": "Failed password for admin from 192.0.2.55:37930"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:37",
+        "event": "Failed password for admin from 192.0.2.55:25604"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:40",
+        "event": "Failed password for admin from 192.0.2.55:61719"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:42",
+        "event": "Failed password for admin from 192.0.2.55:24617"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:45",
+        "event": "Failed password for admin from 192.0.2.55:30351"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:48",
+        "event": "Failed password for admin from 192.0.2.55:1036"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:50",
+        "event": "Failed password for admin from 192.0.2.55:19667"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:53",
+        "event": "Failed password for admin from 192.0.2.55:34946"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:54",
+        "event": "Failed password for admin from 192.0.2.55:59372"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:56",
+        "event": "Failed password for admin from 192.0.2.55:20706"
+      },
+      {
+        "timestamp": "2026-07-06T09:42:58",
+        "event": "Failed password for admin from 192.0.2.55:15102"
+      },
+      {
+        "timestamp": "2026-07-06T09:43:00",
+        "event": "Accepted password for admin from 192.0.2.55:57104"
+      },
+      {
+        "timestamp": "2026-07-06T09:46:13",
+        "event": "Accepted password for carol from 10.0.0.15:49748"
+      },
+      {
+        "timestamp": "2026-07-06T09:47:35",
+        "event": "Accepted password for carol from 10.0.0.15:34530"
+      },
+      {
+        "timestamp": "2026-07-06T09:53:22",
+        "event": "Accepted password for svc-backup from 10.0.0.11:7203"
+      },
+      {
+        "timestamp": "2026-07-06T09:55:43",
+        "event": "Accepted password for deploy from 10.0.0.12:53075"
+      },
+      {
+        "timestamp": "2026-07-06T09:56:33",
+        "event": "Accepted password for carol from 10.0.0.11:10094"
+      },
+      {
+        "timestamp": "2026-07-06T10:00:53",
+        "event": "Accepted password for svc-backup from 10.0.0.11:16293"
+      },
+      {
+        "timestamp": "2026-07-06T10:03:24",
+        "event": "Accepted password for svc-backup from 10.0.0.12:35693"
+      },
+      {
+        "timestamp": "2026-07-06T10:05:10",
+        "event": "Accepted password for carol from 10.0.0.11:38411"
+      },
+      {
+        "timestamp": "2026-07-06T10:05:43",
+        "event": "Accepted password for alice from 10.0.0.12:6131"
+      },
+      {
+        "timestamp": "2026-07-06T10:15:16",
+        "event": "Accepted password for svc-backup from 10.0.0.11:7657"
+      },
+      {
+        "timestamp": "2026-07-06T10:23:05",
+        "event": "Accepted password for svc-backup from 10.0.0.12:13440"
+      },
+      {
+        "timestamp": "2026-07-06T10:26:37",
+        "event": "Accepted password for bob from 10.0.0.15:42005"
+      },
+      {
+        "timestamp": "2026-07-06T10:36:12",
+        "event": "Accepted password for svc-backup from 10.0.0.15:37602"
+      }
+    ]
+  },
+  "file_integrity_manifest": {
+    "auth.log": "33792ddf15d7d168dbeb60958d0fe30afbcb489bb2ab5e8864f71750a59c34a1",
+    "traffic.csv": "b9a32c7ba6779f85b81232ca14979384ab8efaac1dbe2f4f38adabbb8f4f21db"
+  },
+  "cpp_traffic_statistics": {
+    "raw_csv": "total_records_processed,1340\nunique_source_ips,20\nsrc_ip,total_packets,total_bytes,distinct_dst_ips,distinct_dst_ports,dst_port_entropy_bits\n198.51.100.77,340,17046,1,340,8.409\n10.0.0.3,25,17151,14,6,2.393\n10.0.0.4,25,17658,18,6,2.531\n10.0.0.13,24,17261,16,6,2.382\n10.0.0.12,25,17306,18,6,2.517\n10.0.0.5,23,15028,18,6,2.407\n10.0.0.16,27,24509,19,6,2.406\n10.0.0.14,26,21463,17,6,2.492\n10.0.0.10,19,15701,13,6,2.550\n10.0.0.15,22,18025,15,6,2.465\n",
+    "total_records_processed": 1340,
+    "unique_source_ips": 20,
+    "top_sources": [
+      {
+        "src_ip": "198.51.100.77",
+        "total_packets": "340",
+        "total_bytes": "17046",
+        "distinct_dst_ips": "1",
+        "distinct_dst_ports": "340",
+        "dst_port_entropy_bits": "8.409"
+      },
+      {
+        "src_ip": "10.0.0.3",
+        "total_packets": "25",
+        "total_bytes": "17151",
+        "distinct_dst_ips": "14",
+        "distinct_dst_ports": "6",
+        "dst_port_entropy_bits": "2.393"
+      },
+      {
+        "src_ip": "10.0.0.4",
+        "total_packets": "25",
+        "total_bytes": "17658",
+        "distinct_dst_ips": "18",
+        "distinct_dst_ports": "6",
+        "dst_port_entropy_bits": "2.531"
+      },
+      {
+        "src_ip": "10.0.0.13",
+        "total_packets": "24",
+        "total_bytes": "17261",
+        "distinct_dst_ips": "16",
+        "distinct_dst_ports": "6",
+        "dst_port_entropy_bits": "2.382"
+      },
+      {
+        "src_ip": "10.0.0.12",
+        "total_packets": "25",
+        "total_bytes": "17306",
+        "distinct_dst_ips": "18",
+        "distinct_dst_ports": "6",
+        "dst_port_entropy_bits": "2.517"
+      },
+      {
+        "src_ip": "10.0.0.5",
+        "total_packets": "23",
+        "total_bytes": "15028",
+        "distinct_dst_ips": "18",
+        "distinct_dst_ports": "6",
+        "dst_port_entropy_bits": "2.407"
+      },
+      {
+        "src_ip": "10.0.0.16",
+        "total_packets": "27",
+        "total_bytes": "24509",
+        "distinct_dst_ips": "19",
+        "distinct_dst_ports": "6",
+        "dst_port_entropy_bits": "2.406"
+      },
+      {
+        "src_ip": "10.0.0.14",
+        "total_packets": "26",
+        "total_bytes": "21463",
+        "distinct_dst_ips": "17",
+        "distinct_dst_ports": "6",
+        "dst_port_entropy_bits": "2.492"
+      },
+      {
+        "src_ip": "10.0.0.10",
+        "total_packets": "19",
+        "total_bytes": "15701",
+        "distinct_dst_ips": "13",
+        "distinct_dst_ports": "6",
+        "dst_port_entropy_bits": "2.550"
+      },
+      {
+        "src_ip": "10.0.0.15",
+        "total_packets": "22",
+        "total_bytes": "18025",
+        "distinct_dst_ips": "15",
+        "distinct_dst_ports": "6",
+        "dst_port_entropy_bits": "2.465"
+      }
+    ]
+  }
+}

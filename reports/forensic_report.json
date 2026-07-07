@@ -1,0 +1,208 @@
+{
+  "total_events_parsed": 46,
+  "timeline": [
+    {
+      "timestamp": "2026-07-06T09:03:25",
+      "event": "Accepted password for alice from 10.0.0.11:8039"
+    },
+    {
+      "timestamp": "2026-07-06T09:09:18",
+      "event": "Accepted password for alice from 10.0.0.11:38445"
+    },
+    {
+      "timestamp": "2026-07-06T09:16:26",
+      "event": "Accepted password for deploy from 10.0.0.15:33130"
+    },
+    {
+      "timestamp": "2026-07-06T09:22:39",
+      "event": "Accepted password for svc-backup from 10.0.0.12:4240"
+    },
+    {
+      "timestamp": "2026-07-06T09:27:35",
+      "event": "Accepted password for svc-backup from 10.0.0.15:5668"
+    },
+    {
+      "timestamp": "2026-07-06T09:29:41",
+      "event": "Accepted password for bob from 10.0.0.15:33228"
+    },
+    {
+      "timestamp": "2026-07-06T09:39:06",
+      "event": "Accepted password for alice from 10.0.0.12:53519"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:01",
+      "event": "Failed password for admin from 192.0.2.55:7938"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:04",
+      "event": "Failed password for admin from 192.0.2.55:38809"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:06",
+      "event": "Failed password for admin from 192.0.2.55:31086"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:08",
+      "event": "Failed password for admin from 192.0.2.55:29012"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:11",
+      "event": "Failed password for admin from 192.0.2.55:11956"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:13",
+      "event": "Failed password for admin from 192.0.2.55:37066"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:15",
+      "event": "Failed password for admin from 192.0.2.55:23143"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:17",
+      "event": "Failed password for admin from 192.0.2.55:36013"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:20",
+      "event": "Failed password for admin from 192.0.2.55:30057"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:23",
+      "event": "Failed password for admin from 192.0.2.55:60169"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:25",
+      "event": "Failed password for admin from 192.0.2.55:22300"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:28",
+      "event": "Failed password for admin from 192.0.2.55:28047"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:30",
+      "event": "Failed password for admin from 192.0.2.55:29243"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:33",
+      "event": "Failed password for admin from 192.0.2.55:22221"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:35",
+      "event": "Failed password for admin from 192.0.2.55:37930"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:37",
+      "event": "Failed password for admin from 192.0.2.55:25604"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:40",
+      "event": "Failed password for admin from 192.0.2.55:61719"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:42",
+      "event": "Failed password for admin from 192.0.2.55:24617"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:45",
+      "event": "Failed password for admin from 192.0.2.55:30351"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:48",
+      "event": "Failed password for admin from 192.0.2.55:1036"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:50",
+      "event": "Failed password for admin from 192.0.2.55:19667"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:53",
+      "event": "Failed password for admin from 192.0.2.55:34946"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:54",
+      "event": "Failed password for admin from 192.0.2.55:59372"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:56",
+      "event": "Failed password for admin from 192.0.2.55:20706"
+    },
+    {
+      "timestamp": "2026-07-06T09:42:58",
+      "event": "Failed password for admin from 192.0.2.55:15102"
+    },
+    {
+      "timestamp": "2026-07-06T09:43:00",
+      "event": "Accepted password for admin from 192.0.2.55:57104"
+    },
+    {
+      "timestamp": "2026-07-06T09:46:13",
+      "event": "Accepted password for carol from 10.0.0.15:49748"
+    },
+    {
+      "timestamp": "2026-07-06T09:47:35",
+      "event": "Accepted password for carol from 10.0.0.15:34530"
+    },
+    {
+      "timestamp": "2026-07-06T09:53:22",
+      "event": "Accepted password for svc-backup from 10.0.0.11:7203"
+    },
+    {
+      "timestamp": "2026-07-06T09:55:43",
+      "event": "Accepted password for deploy from 10.0.0.12:53075"
+    },
+    {
+      "timestamp": "2026-07-06T09:56:33",
+      "event": "Accepted password for carol from 10.0.0.11:10094"
+    },
+    {
+      "timestamp": "2026-07-06T10:00:53",
+      "event": "Accepted password for svc-backup from 10.0.0.11:16293"
+    },
+    {
+      "timestamp": "2026-07-06T10:03:24",
+      "event": "Accepted password for svc-backup from 10.0.0.12:35693"
+    },
+    {
+      "timestamp": "2026-07-06T10:05:10",
+      "event": "Accepted password for carol from 10.0.0.11:38411"
+    },
+    {
+      "timestamp": "2026-07-06T10:05:43",
+      "event": "Accepted password for alice from 10.0.0.12:6131"
+    },
+    {
+      "timestamp": "2026-07-06T10:15:16",
+      "event": "Accepted password for svc-backup from 10.0.0.11:7657"
+    },
+    {
+      "timestamp": "2026-07-06T10:23:05",
+      "event": "Accepted password for svc-backup from 10.0.0.12:13440"
+    },
+    {
+      "timestamp": "2026-07-06T10:26:37",
+      "event": "Accepted password for bob from 10.0.0.15:42005"
+    },
+    {
+      "timestamp": "2026-07-06T10:36:12",
+      "event": "Accepted password for svc-backup from 10.0.0.15:37602"
+    }
+  ],
+  "bruteforce_findings": [
+    {
+      "src_ip": "192.0.2.55",
+      "failed_attempt_count": 25,
+      "window_start": "2026-07-06T09:42:01",
+      "window_end": "2026-07-06T09:42:58",
+      "targeted_users": [
+        "admin"
+      ],
+      "likely_compromised": true,
+      "compromise_time": "2026-07-06T09:43:00",
+      "compromised_user": "admin",
+      "evidence": "25 failed login attempts from 192.0.2.55 between 2026-07-06T09:42:01 and 2026-07-06T09:42:58; FOLLOWED BY SUCCESSFUL LOGIN as 'admin' at 2026-07-06T09:43:00"
+    }
+  ],
+  "file_integrity_manifest": {
+    "auth.log": "33792ddf15d7d168dbeb60958d0fe30afbcb489bb2ab5e8864f71750a59c34a1",
+    "traffic.csv": "b9a32c7ba6779f85b81232ca14979384ab8efaac1dbe2f4f38adabbb8f4f21db"
+  }
+}

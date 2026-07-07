@@ -1,0 +1,34 @@
+{
+  "total_records_analyzed": 1340,
+  "rules_evaluated": [
+    "SCAN-001",
+    "FLOOD-001",
+    "PORT-001"
+  ],
+  "alert_count": 2,
+  "alerts": [
+    {
+      "rule_id": "SCAN-001",
+      "rule_name": "Port Scan Detection",
+      "severity": "high",
+      "src_ip": "198.51.100.77",
+      "dst_ip": "10.0.0.5",
+      "distinct_ports_contacted": 20,
+      "window_start": "2026-07-06T08:20:00",
+      "window_end": "2026-07-06T08:20:01",
+      "evidence": "20 distinct destination ports contacted in 60s window (threshold=20)"
+    },
+    {
+      "rule_id": "FLOOD-001",
+      "rule_name": "SYN Flood / Packet Flood Detection",
+      "severity": "critical",
+      "src_ip": "198.51.100.88",
+      "dst_ip": "10.0.0.9",
+      "dst_port": 80,
+      "packet_count": 100,
+      "window_start": "2026-07-06T08:35:00",
+      "window_end": "2026-07-06T08:35:00",
+      "evidence": "100 packets to 10.0.0.9:80 within 10s (threshold=100)"
+    }
+  ]
+}

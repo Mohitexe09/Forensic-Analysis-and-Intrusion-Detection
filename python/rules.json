@@ -1,0 +1,39 @@
+{
+  "rules": [
+    {
+      "id": "SCAN-001",
+      "name": "Port Scan Detection",
+      "description": "Single source IP contacts an unusually high number of distinct destination ports on the same destination host within a short time window.",
+      "type": "port_scan",
+      "window_seconds": 60,
+      "distinct_port_threshold": 20,
+      "severity": "high"
+    },
+    {
+      "id": "FLOOD-001",
+      "name": "SYN Flood / Packet Flood Detection",
+      "description": "Single source IP sends an abnormally high volume of packets to the same destination host/port within a short time window.",
+      "type": "flood",
+      "window_seconds": 10,
+      "packet_count_threshold": 100,
+      "severity": "critical"
+    },
+    {
+      "id": "BRUTE-001",
+      "name": "SSH Brute Force Detection",
+      "description": "Single source IP produces repeated failed authentication attempts against the same or different accounts within a short time window.",
+      "type": "bruteforce",
+      "window_seconds": 120,
+      "failed_attempt_threshold": 8,
+      "severity": "high"
+    },
+    {
+      "id": "PORT-001",
+      "name": "Suspicious Destination Port",
+      "description": "Traffic destined for ports commonly associated with malware C2, backdoors, or unauthorized remote access.",
+      "type": "watchlist_port",
+      "ports": [4444, 31337, 12345, 6667, 1337],
+      "severity": "medium"
+    }
+  ]
+}

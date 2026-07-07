@@ -1,0 +1,52 @@
+FORENSIC ANALYSIS & INTRUSION DETECTION -- UNIFIED REPORT
+Generated: 2026-07-07T16:11:54.195963
+======================================================================
+
+## NETWORK IDS ALERTS
+
+Records analyzed: 1340
+Rules evaluated:  SCAN-001, FLOOD-001, PORT-001
+Alerts raised:    2
+
+  [HIGH] SCAN-001 - Port Scan Detection
+    Source: 198.51.100.77  ->  Target: 10.0.0.5
+    Evidence: 20 distinct destination ports contacted in 60s window (threshold=20)
+
+  [CRITICAL] FLOOD-001 - SYN Flood / Packet Flood Detection
+    Source: 198.51.100.88  ->  Target: 10.0.0.9
+    Evidence: 100 packets to 10.0.0.9:80 within 10s (threshold=100)
+
+
+## FORENSIC LOG ANALYSIS (Brute Force Detection)
+
+Auth events parsed: 46
+Brute-force findings: 1
+
+  Source IP: 192.0.2.55
+    Failed attempts: 25
+    Window: 2026-07-06T09:42:01 -> 2026-07-06T09:42:58
+    Targeted user(s): admin
+    Status: *** ATTACK SUCCEEDED - ACCOUNT LIKELY COMPROMISED ***
+    Compromised account: admin at 2026-07-06T09:43:00
+
+
+## FILE INTEGRITY BASELINE (SHA-256)
+
+  auth.log: 33792ddf15d7d168dbeb60958d0fe30afbcb489bb2ab5e8864f71750a59c34a1
+  traffic.csv: b9a32c7ba6779f85b81232ca14979384ab8efaac1dbe2f4f38adabbb8f4f21db
+
+## C++ HIGH-PERFORMANCE TRAFFIC STATISTICS (top sources by distinct dst ports)
+
+src_ip            packets   bytes     dst_ips   dst_ports   entropy(bits)
+198.51.100.77     340       17046     1         340         8.409
+10.0.0.3          25        17151     14        6           2.393
+10.0.0.4          25        17658     18        6           2.531
+10.0.0.13         24        17261     16        6           2.382
+10.0.0.12         25        17306     18        6           2.517
+10.0.0.5          23        15028     18        6           2.407
+10.0.0.16         27        24509     19        6           2.406
+10.0.0.14         26        21463     17        6           2.492
+10.0.0.10         19        15701     13        6           2.550
+10.0.0.15         22        18025     15        6           2.465
+
+  Note: high port-entropy + high distinct-port count = classic port-scan signature.
